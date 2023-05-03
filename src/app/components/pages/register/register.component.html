@@ -15,6 +15,7 @@
         <div class="register-form-float-container">
             <label>CPF: </label>
             <input 
+                mask="000.000.000-00"
                 type="text" 
                 formControlName="cpf"
                 required>
@@ -22,6 +23,7 @@
         <div class="register-form-float-container">
             <label>Data de Nascimento: </label>
             <input 
+                mask="d0/M0/0000"
                 id="dateOfBirth"
                 type="text" 
                 formControlName="dateOfBirth"
@@ -30,6 +32,9 @@
         <div class="register-form-float-container">
             <label>Renda Mensal: </label>
             <input 
+                mask="separator.2"
+                thousandSeparator="."
+                separatorLimit="1000000"
                 type="text" 
                 formControlName="monthlyIncome"
                 required>
