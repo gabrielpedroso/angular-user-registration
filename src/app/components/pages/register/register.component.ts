@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
+import { ClientService } from 'src/app/services/client.service';
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -8,6 +10,8 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
   userForm!: FormGroup;
+
+  constructor(private service: ClientService) { }
 
   ngOnInit(): void {
     this.userForm = new FormGroup({
@@ -31,6 +35,13 @@ export class RegisterComponent implements OnInit {
   submit() {
     if (this.userForm.invalid) return;
 
-    console.log(this.userForm.value);
+    this.service.addClient(this.userForm.value).subscribe({
+      next: (val: any) => {
+        console.log('Client added successfully');
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    });
   }
 }
