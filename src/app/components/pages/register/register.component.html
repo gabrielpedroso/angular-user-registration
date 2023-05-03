@@ -1,0 +1,48 @@
+<div class="register">
+    <div class="register-title">Cadastro de Cliente</div>
+    <form 
+        class="register-form"
+        (ngSubmit)="submit()" 
+        [formGroup]="userForm" 
+        #formDir="ngForm">
+        <div class="register-form-float-container">
+            <label>Nome: </label>
+            <input 
+                type="text" 
+                formControlName="name"
+                required>
+        </div>
+        <div class="register-form-float-container">
+            <label>CPF: </label>
+            <input 
+                type="text" 
+                formControlName="cpf"
+                required>
+        </div>
+        <div class="register-form-float-container">
+            <label>Data de Nascimento: </label>
+            <input 
+                id="dateOfBirth"
+                type="text" 
+                formControlName="dateOfBirth"
+                required>
+        </div>
+        <div class="register-form-float-container">
+            <label>Renda Mensal: </label>
+            <input 
+                type="text" 
+                formControlName="monthlyIncome"
+                required>
+        </div>
+        <div class="register-form-float-container">
+            <label>E-mail: </label>
+            <input 
+                type="text" 
+                formControlName="email"
+                required>
+        </div>
+        <div class="register-form-action">
+            <input type="submit">
+        </div>
+    </form>
+</div>
