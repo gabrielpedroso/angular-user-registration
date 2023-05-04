@@ -1,0 +1,47 @@
+.client-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0 1.5rem;
+
+    &-title {
+        color: #0B4051;
+        font-size: 20px;
+        font-weight: 900;
+    }
+
+    th {
+        background-color: #11728B;
+        color: #FFFFFF;
+    }
+
+    th:first-child { border-radius: 40px 0 0 40px };
+
+    th:last-child { border-radius: 0 0 40px 0 };
+
+    tr.mat-mdc-table, .mdc-data-table__header-row {
+        height: 38px;
+    }
+
+    tr.mat-mdc-table, .mdc-data-table__row {
+        height: 38px;
+    }
+
+    .mat-mdc-row:nth-child(even){
+        background-color: #FFFFFF;
+        border: none;
+    }
+            
+    .mat-mdc-row:nth-child(odd){
+        background-color: #F7F7F7;
+        border: none;
+    }
+
+    td:first-child { border-radius: 40px 0 0 40px };
+
+    td:last-child { border-radius: 0 40px 40px 0 };
+
+    td {
+        border: none;
+    }
+}
