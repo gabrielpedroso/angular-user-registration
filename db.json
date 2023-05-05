@@ -19,59 +19,12 @@
   "clients": [
     {
       "id": 1,
-      "name": "Gabriel teste",
-      "cpf": "23253534543",
-      "dateOfBirth": "03101870",
-      "monthlyIncome": 10000,
-      "email": "gabriel@gmail.com"
-    },
-    {
-      "id": 2,
-      "name": "john teste",
-      "cpf": "42546634654",
-      "dateOfBirth": "10091790",
-      "monthlyIncome": 30000,
-      "email": "john@gmail.com"
-    },
-    {
-      "id": 3,
-      "name": "vitoria teste",
-      "cpf": "90234729355",
-      "dateOfBirth": "07022005",
-      "monthlyIncome": 5000,
-      "email": "vitoria@gmail.com"
-    },
-    {
-      "id": 4,
-      "name": "jose teste",
-      "cpf": "12356567788",
-      "dateOfBirth": "07121990",
-      "monthlyIncome": 1000,
-      "email": "jose@gmail.com"
-    },
-    {
-      "id": 5,
-      "name": "Gabriel Macito Pedroso",
-      "cpf": "42353623414",
-      "dateOfBirth": "10101910",
-      "monthlyIncome": 9000,
-      "email": "gagagag@gmail.com"
-    },
-    {
-      "id": 6,
-      "name": "teste teste",
-      "cpf": "23434324234",
-      "dateOfBirth": "09091999",
-      "monthlyIncome": 11223.42,
-      "email": "gdgdfgdf@fdgdfgd"
-    },
-    {
-      "id": 7,
-      "name": "yugduyasg",
-      "cpf": "21312312312",
-      "dateOfBirth": "05021790",
-      "monthlyIncome": 2333333,
-      "email": "gayushdgauysdg"
+      "name": "gabriel teste",
+      "cpf": "72638213122",
+      "dateOfBirth": "09021999",
+      "monthlyIncome": 11111,
+      "email": "yasgduas",
+      "registrationDate": "05/05/2023"
     }
   ]
 }

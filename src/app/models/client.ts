@@ -5,4 +5,5 @@ export interface IClient {
     dateOfBirth: string;
     monthlyIncome: number;
     email: string;
+    registrationDate: string;
 }

@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs';
 
 import { ClientService } from 'src/app/services/client.service';
+import { Validation } from 'src/app/validation';
 
 @Component({
   selector: 'app-register',
@@ -26,11 +27,23 @@ export class RegisterComponent implements OnInit {
 
     this.userForm = new FormGroup({
       id: new FormControl(''),
-      name: new FormControl('', [Validators.required]),
-      cpf: new FormControl({ value: '', disabled: !this.isAddMode }, [Validators.required]),
-      dateOfBirth: new FormControl('', [Validators.required]),
+      name: new FormControl('', Validators.compose([
+        Validators.required,
+        Validators.minLength(3),
+        Validators.maxLength(100)
+      ])),
+      cpf: new FormControl({ value: '', disabled: !this.isAddMode }, Validators.compose([
+        Validators.required,
+        Validation.ValidateCpf,
+      ])),
+      dateOfBirth: new FormControl('', Validators.compose([
+        Validators.required,
+        Validation.Over18yearsOld,
+        Validation.LessThan60yearsOld,
+      ])),
       monthlyIncome: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required]),
+      registrationDate: new FormControl(new Date().toLocaleDateString('pt-Br')),
     });
 
     if (!this.isAddMode) {

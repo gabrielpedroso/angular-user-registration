@@ -7,23 +7,24 @@ import { IClient } from '../models/client';
   providedIn: 'root'
 })
 export class ClientService {
+  baseUrl = 'http://localhost:3000/clients';
+
   constructor(private http: HttpClient) { }
 
   addClient(data: IClient): Observable<IClient> {
-    return this.http.post<IClient>('http://localhost:3000/clients', data);
+    return this.http.post<IClient>(`${this.baseUrl}`, data);
   }
 
   fetch(): Observable<IClient[]> {
-    return this.http.get<IClient[]>('http://localhost:3000/clients');
+    return this.http.get<IClient[]>(`${this.baseUrl}`);
   }
 
   getById(id: string): Observable<IClient[]> {
-    const teste = this.http.get<IClient[]>(`http://localhost:3000/clients?id=${id}`);
-    console.log(teste);
-    return teste;
+    return this.http.get<IClient[]>(`${this.baseUrl}?id=${id}`);
+
   }
 
   update(data: IClient): Observable<IClient> {
-    return this.http.put<IClient>(`http://localhost:3000/clients/${data.id}`, data);
+    return this.http.put<IClient>(`${this.baseUrl}/${data.id}`, data);
   }
 }
