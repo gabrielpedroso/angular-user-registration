@@ -1,4 +1,21 @@
 .container {
     height: 55px;
     background: #002C37;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    &-brand {
+        background-color: #FFFFFF;
+        color: #00586F;
+        padding: 0.7rem;
+        border-radius: 40px 0;
+        font-weight: 700;
+    }
+
+    &-name {
+        color: #FFFFFF;
+        font-weight: 700;
+    }
 }

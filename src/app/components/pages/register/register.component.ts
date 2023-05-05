@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs';
 
 import { ClientService } from 'src/app/services/client.service';
@@ -17,7 +17,8 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     private service: ClientService,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    public router: Router) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
@@ -79,9 +80,15 @@ export class RegisterComponent implements OnInit {
         }
       });
     }
+
+    this.goToClientList();
   } 
 
   backToList() {
-    console.log('Voltou');
+    this.goToClientList();
+  }
+
+  goToClientList() {
+    this.router.navigate(['lista-clientes']);
   }
 }

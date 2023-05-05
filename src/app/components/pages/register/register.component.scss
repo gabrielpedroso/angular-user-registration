@@ -40,8 +40,9 @@
         &-action {
             display: flex;
             justify-content: flex-end;
+            gap: 1rem;
 
-            input {
+            input, button {
                 background-color: #0A4A5B;
                 color: #FFFFFF;
                 padding: 8px 16px;
