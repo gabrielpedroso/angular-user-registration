@@ -46,7 +46,11 @@
                 formControlName="email"
                 required>
         </div>
-        <div class="register-form-action">
+        <div *ngIf="isAddMode" class="register-form-action">
+            <input type="submit">
+        </div>
+        <div *ngIf="!isAddMode" class="register-form-action">
+            <button type="button" (click)="backToList()">Voltar</button>
             <input type="submit">
         </div>
     </form>

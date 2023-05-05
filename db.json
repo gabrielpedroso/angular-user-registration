@@ -51,11 +51,19 @@
     },
     {
       "id": 5,
-      "name": "Gabriel Macito",
-      "cpf": "12343564575",
+      "name": "Gabriel Macito Pedroso",
+      "cpf": "42353623414",
       "dateOfBirth": "10101910",
       "monthlyIncome": 9000,
       "email": "gagagag@gmail.com"
+    },
+    {
+      "id": 6,
+      "name": "teste teste",
+      "cpf": "23434324234",
+      "dateOfBirth": "09091999",
+      "monthlyIncome": 11223.42,
+      "email": "gdgdfgdf@fdgdfgd"
     }
   ]
 }

@@ -16,4 +16,14 @@ export class ClientService {
   fetch(): Observable<IClient[]> {
     return this.http.get<IClient[]>('http://localhost:3000/clients');
   }
+
+  getById(id: string): Observable<IClient[]> {
+    const teste = this.http.get<IClient[]>(`http://localhost:3000/clients?id=${id}`);
+    console.log(teste);
+    return teste;
+  }
+
+  update(data: IClient): Observable<IClient> {
+    return this.http.put<IClient>(`http://localhost:3000/clients/${data.id}`, data);
+  }
 }
